@@ -146,11 +146,15 @@
         }
 
         .vc-grid img {
-            height: 60px;
+            height: 80px;
             width: auto;
             object-fit: contain;
             transition: all 0.5s ease;
             opacity: 0.8;
+        }
+
+        .vc-grid img:first-child {
+            height: 100px;
         }
 
         .vc-grid img:hover {
@@ -179,12 +183,28 @@
             border-color: #888;
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 1200px) {
             .container {
                 grid-template-columns: 1fr;
+                gap: 4rem;
             }
-            .hero-content h1 {
+            .section {
+                padding: 8rem 3rem;
+            }
+            h2 {
                 font-size: 3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 3.5rem;
+                letter-spacing: 0.15em;
+                word-break: break-word;
+                padding: 0 1rem;
+            }
+            .hero-content p {
+                font-size: 1.2rem;
             }
             .section {
                 padding: 6rem 2rem;
@@ -193,7 +213,37 @@
                 font-size: 2.5rem;
             }
             .vc-grid {
-                grid-template-columns: 1fr;
+                gap: 3rem;
+                flex-direction: column;
+            }
+            .vc-grid img,
+            .vc-grid img:first-child {
+                height: 70px;
+            }
+            p {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 2.2rem;
+                letter-spacing: 0.1em;
+                word-break: break-word;
+                padding: 0 1rem;
+            }
+            .hero-content p {
+                font-size: 1rem;
+            }
+            h2 {
+                font-size: 2rem;
+            }
+            .section {
+                padding: 4rem 1.5rem;
+            }
+            .vc-grid img,
+            .vc-grid img:first-child {
+                height: 60px;
             }
         }
 
