@@ -3,109 +3,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dreamsleep - Ensuring Best Sleep</title>
+    <title>Dreamsleep - Modern Design</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        * {
             margin: 0;
             padding: 0;
-            background-color: #000;
-            color: #fff;
+            box-sizing: border-box;
         }
-        header {
-            background-color: #1a1a1a;
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: #000;
             color: #fff;
-            padding: 1rem 2rem;
+            line-height: 1.6;
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('bedroom.jpg');
+            background-size: cover;
+            background-position: center;
             text-align: center;
         }
-        section {
-            padding: 2rem;
-            background-color: #121212;
-            margin: 1rem;
-            border-radius: 10px;
+
+        .hero-content h1 {
+            font-size: 5rem;
+            font-weight: 300;
+            letter-spacing: 0.2em;
+            margin-bottom: 1rem;
         }
-        .highlight {
-            background-color: #333;
-            padding: 1rem;
-            border-radius: 5px;
+
+        .hero-content p {
+            font-size: 1.2rem;
+            letter-spacing: 0.1em;
         }
-        footer {
-            background-color: #1a1a1a;
-            color: #fff;
-            text-align: center;
-            padding: 1rem 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+
+        .section {
+            padding: 8rem 4rem;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
         }
-        .contact-info {
-            margin-top: 1rem;
+
+        .section:nth-child(odd) {
+            background: #111;
         }
-        .contact-info a {
-            color: #3498db;
-            text-decoration: none;
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
         }
+
         .image-container {
-            text-align: center;
-            margin: 2rem 0;
+            position: relative;
+            overflow: hidden;
         }
+
         .image-container img {
-            max-width: 100%;
+            width: 100%;
             height: auto;
-            border-radius: 10px;
+            transition: transform 0.5s ease;
         }
-        h1, h2 {
-            color: #00bfff;
+
+        .image-container:hover img {
+            transform: scale(1.05);
         }
-        a {
-            color: #1e90ff;
+
+        .content {
+            padding: 2rem;
+        }
+
+        h2 {
+            font-size: 3rem;
+            font-weight: 300;
+            margin-bottom: 2rem;
+            letter-spacing: 0.1em;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            font-weight: 300;
+            line-height: 1.8;
+        }
+
+        .vc-section {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 4rem;
+            background: #fff;
+        }
+
+        .vc-section img {
+            max-width: 200px;
+            filter: grayscale(100%);
+            transition: filter 0.3s ease;
+        }
+
+        .vc-section img:hover {
+            filter: grayscale(0%);
+        }
+
+        .contact {
+            text-align: center;
+            padding: 8rem 2rem;
+            background: #000;
+        }
+
+        .contact a {
+            color: #fff;
+            text-decoration: none;
+            border-bottom: 1px solid #fff;
+            padding-bottom: 0.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .contact a:hover {
+            color: #888;
+            border-color: #888;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+            .section {
+                padding: 4rem 2rem;
+            }
+            h2 {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>Dreamsleep</h1>
-    <p>Ensuring Best Sleep, Every Night</p>
-</header>
-
-<section>
-    <h2>About Us</h2>
-    <p>Dreamsleep Healthcare is a private limited company headquartered in Bangalore, India. We build smart home devices that enhance health and well-being. Our target markets include India, US, UAE, Europe, and Southeast Asia. Our sales target for the first six months of launch is 5,000 units.</p>
+<section class="hero">
+    <div class="hero-content">
+        <h1>DREAMSLEEP</h1>
+        <p>Ensuring Best Sleep, Every Night</p>
+    </div>
 </section>
 
-<div class="image-container">
-    <img src="extracted_image_0_0.jpeg" alt="Dreamsleep Logo">
-</div>
-
-<section class="highlight">
-    <h2>The Problem</h2>
-    <p>Over 100 million people in the US alone are sleep-deprived. Sleep deprivation significantly increases the risk of major chronic health problems like arthritis, depression, diabetes, heart disease, and more.</p>
+<section class="section">
+    <div class="container">
+        <div class="image-container">
+            <img src="product.jpg" alt="Dreamsleep Product">
+        </div>
+        <div class="content">
+            <h2>About Us</h2>
+            <p>Dreamsleep Healthcare is a private limited company headquartered in Bangalore, India. We build smart home devices that enhance health and well-being.</p>
+        </div>
+    </div>
 </section>
 
-<div class="image-container">
-    <img src="extracted_image_1_0.jpeg" alt="Sleep Deprivation Data">
-</div>
-
-<section>
-    <h2>Our Product</h2>
-    <p><strong>Mattress Temperature Controller:</strong> Dynamically optimizes mattress temperature, improving sleep quality by up to 32%.</p>
-    <p><strong>Biomarker Tracking:</strong> Tracks sleep, heart rate, HRV, temperature, respiratory rate, and snoring without the need for wearable devices.</p>
+<section class="section">
+    <div class="container">
+        <div class="content">
+            <h2>The Problem</h2>
+            <p>Over 100 million people in the US alone are sleep-deprived. Sleep deprivation significantly increases the risk of major chronic health problems.</p>
+        </div>
+        <div class="image-container">
+            <img src="sleep-deprivation.jpg" alt="Sleep Deprivation">
+        </div>
+    </div>
 </section>
 
-<div class="image-container">
-    <img src="extracted_image_4_0.jpeg" alt="Product Features">
-</div>
+<section class="section">
+    <div class="container">
+        <div class="image-container">
+            <img src="bedroom.jpg" alt="Product Features">
+        </div>
+        <div class="content">
+            <h2>Our Product</h2>
+            <p><strong>Mattress Temperature Controller:</strong> Dynamically optimizes mattress temperature, improving sleep quality by up to 32%.</p>
+        </div>
+    </div>
+</section>
 
-<section>
+<section class="vc-section">
+    <img src="de-vc.jpg" alt="VC Logo 1">
+    <img src="better-vc.jpg" alt="VC Logo 2">
+</section>
+
+<section class="contact">
     <h2>Contact Us</h2>
-    <p>Email: <a href="mailto:sahu@dreamsleep.co.in">sahu@dreamsleep.co.in</a>, <a href="mailto:abhinav@dreamsleep.co.in">abhinav@dreamsleep.co.in</a></p>
-    <p>Phone: +91 8660896414</p>
+    <p>Email: <a href="mailto:sahu@dreamsleep.co.in">sahu@dreamsleep.co.in</a></p>
+    <p>Phone: <a href="tel:+918660896414">+91 8660896414</a></p>
 </section>
-
-<footer>
-    <p>&copy; 2024 Dreamsleep Healthcare</p>
-</footer>
 
 </body>
 </html>
