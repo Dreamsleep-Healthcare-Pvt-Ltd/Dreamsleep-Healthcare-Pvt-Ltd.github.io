@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dreamsleep - Modern Design</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Dreamsleep - Redefining Sleep</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -17,6 +17,7 @@
             background: #000;
             color: #fff;
             line-height: 1.6;
+            overflow-x: hidden;
         }
 
         .hero {
@@ -24,29 +25,48 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('bedroom.jpg');
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('bedroom.jpg');
             background-size: cover;
             background-position: center;
+            background-attachment: fixed;
             text-align: center;
+            position: relative;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 200px;
+            background: linear-gradient(transparent, #000);
+        }
+
+        .hero-content {
+            z-index: 1;
         }
 
         .hero-content h1 {
-            font-size: 5rem;
-            font-weight: 300;
-            letter-spacing: 0.2em;
+            font-size: 6rem;
+            font-weight: 200;
+            letter-spacing: 0.3em;
             margin-bottom: 1rem;
+            text-transform: uppercase;
         }
 
         .hero-content p {
-            font-size: 1.2rem;
-            letter-spacing: 0.1em;
+            font-size: 1.4rem;
+            letter-spacing: 0.2em;
+            font-weight: 300;
         }
 
         .section {
-            padding: 8rem 4rem;
+            padding: 12rem 4rem;
             min-height: 100vh;
             display: flex;
             align-items: center;
+            position: relative;
         }
 
         .section:nth-child(odd) {
@@ -54,11 +74,11 @@
         }
 
         .container {
-            max-width: 1400px;
+            max-width: 1600px;
             margin: 0 auto;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            gap: 6rem;
             align-items: center;
         }
 
@@ -70,7 +90,7 @@
         .image-container img {
             width: 100%;
             height: auto;
-            transition: transform 0.5s ease;
+            transition: transform 0.7s ease;
         }
 
         .image-container:hover img {
@@ -82,40 +102,65 @@
         }
 
         h2 {
-            font-size: 3rem;
-            font-weight: 300;
+            font-size: 3.5rem;
+            font-weight: 200;
             margin-bottom: 2rem;
-            letter-spacing: 0.1em;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
         }
 
         p {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             margin-bottom: 2rem;
             font-weight: 300;
-            line-height: 1.8;
+            line-height: 2;
+            letter-spacing: 0.05em;
         }
 
         .vc-section {
+            padding: 8rem 4rem;
+            background: #000;
+            text-align: center;
+            position: relative;
+        }
+
+        .vc-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .vc-title {
+            color: #fff;
+            font-size: 2rem;
+            font-weight: 200;
+            letter-spacing: 0.2em;
+            margin-bottom: 4rem;
+            text-transform: uppercase;
+        }
+
+        .vc-grid {
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
             align-items: center;
-            padding: 4rem;
-            background: #fff;
+            gap: 6rem;
         }
 
-        .vc-section img {
-            max-width: 200px;
-            filter: grayscale(100%);
-            transition: filter 0.3s ease;
+        .vc-grid img {
+            height: 60px;
+            width: auto;
+            object-fit: contain;
+            transition: all 0.5s ease;
+            opacity: 0.8;
         }
 
-        .vc-section img:hover {
-            filter: grayscale(0%);
+        .vc-grid img:hover {
+            opacity: 1;
+            transform: scale(1.05);
         }
 
         .contact {
             text-align: center;
-            padding: 8rem 2rem;
+            padding: 12rem 2rem;
             background: #000;
         }
 
@@ -125,6 +170,8 @@
             border-bottom: 1px solid #fff;
             padding-bottom: 0.2rem;
             transition: all 0.3s ease;
+            font-weight: 300;
+            letter-spacing: 0.1em;
         }
 
         .contact a:hover {
@@ -140,11 +187,32 @@
                 font-size: 3rem;
             }
             .section {
-                padding: 4rem 2rem;
+                padding: 6rem 2rem;
             }
             h2 {
-                font-size: 2rem;
+                font-size: 2.5rem;
             }
+            .vc-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Luxury Scroll Animation */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #000;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
         }
     </style>
 </head>
@@ -152,8 +220,8 @@
 
 <section class="hero">
     <div class="hero-content">
-        <h1>DREAMSLEEP</h1>
-        <p>Ensuring Best Sleep, Every Night</p>
+        <h1>Dreamsleep</h1>
+        <p>Redefining the Art of Sleep</p>
     </div>
 </section>
 
@@ -194,12 +262,17 @@
 </section>
 
 <section class="vc-section">
-    <img src="de-vc.jpg" alt="VC Logo 1">
-    <img src="better-vc.jpg" alt="VC Logo 2">
+    <div class="vc-container">
+        <h2 class="vc-title">Backed By Industry Leaders</h2>
+        <div class="vc-grid">
+            <img src="de-vc.jpg" alt="VC Logo 1">
+            <img src="better-vc.jpg" alt="VC Logo 2">
+        </div>
+    </div>
 </section>
 
 <section class="contact">
-    <h2>Contact Us</h2>
+    <h2>Experience Luxury</h2>
     <p>Email: <a href="mailto:sahu@dreamsleep.co.in">sahu@dreamsleep.co.in</a></p>
     <p>Phone: <a href="tel:+918660896414">+91 8660896414</a></p>
 </section>
