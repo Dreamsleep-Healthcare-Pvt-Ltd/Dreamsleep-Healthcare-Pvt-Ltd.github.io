@@ -3,329 +3,629 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dreamsleep - Redefining Sleep</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="favicon.ico">
+    
+    <!-- OpenGraph Meta Tags for Link Previews -->
+    <meta property="og:title" content="Introducing Dreamspan">
+    <meta property="og:description" content="Introducing Dreamspan.">
+    <meta property="og:image" content="hero.png">
+    <meta property="og:url" content="">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Introducing Dreamspan">
+    <meta name="twitter:description" content="Introducing Dreamspan.">
+    <meta name="twitter:image" content="hero.png">
+    
+    <title>Introducing Dreamspan</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
-            font-family: 'Montserrat', sans-serif;
-            background: #000;
-            color: #fff;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        .hero {
-            height: 100vh;
+            padding: 0;
+            font-family: "Helvetica Now Display", Helvetica, Arial, sans-serif;
             display: flex;
-            align-items: center;
             justify-content: center;
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('bedroom.jpg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            text-align: center;
-            position: relative;
-        }
-
-        .hero::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 200px;
-            background: linear-gradient(transparent, #000);
-        }
-
-        .hero-content {
-            z-index: 1;
-        }
-
-        .hero-content h1 {
-            font-size: 6rem;
-            font-weight: 200;
-            letter-spacing: 0.3em;
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-        }
-
-        .hero-content p {
-            font-size: 1.4rem;
-            letter-spacing: 0.2em;
-            font-weight: 300;
-        }
-
-        .section {
-            padding: 12rem 4rem;
+            align-items: flex-start;
             min-height: 100vh;
-            display: flex;
-            align-items: center;
-            position: relative;
+            background-color: white;
+            line-height: 1.6;
+            font-weight: 300;  /* Added lighter font weight */
         }
-
-        .section:nth-child(odd) {
-            background: #111;
-        }
-
         .container {
-            max-width: 1600px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 6rem;
-            align-items: center;
-        }
-
-        .image-container {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .image-container img {
             width: 100%;
-            height: auto;
-            transition: transform 0.7s ease;
-        }
-
-        .image-container:hover img {
-            transform: scale(1.05);
-        }
-
-        .content {
-            padding: 2rem;
-        }
-
-        h2 {
-            font-size: 3.5rem;
-            font-weight: 200;
-            margin-bottom: 2rem;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-        }
-
-        p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            font-weight: 300;
-            line-height: 2;
-            letter-spacing: 0.05em;
-        }
-
-        .vc-section {
-            padding: 8rem 4rem;
-            background: #000;
-            text-align: center;
-            position: relative;
-        }
-
-        .vc-container {
-            max-width: 1200px;
+            max-width: 800px;  /* Reduced from 1200px for better readability */
+            background: white;
+            padding: 60px 32px;  /* Increased padding */
             margin: 0 auto;
         }
-
-        .vc-title {
-            color: #fff;
-            font-size: 2rem;
-            font-weight: 200;
-            letter-spacing: 0.2em;
-            margin-bottom: 4rem;
-            text-transform: uppercase;
+        h1, h2, h3 {
+            color: #333;
+            margin: 48px 0 24px 0;  /* Increased spacing around headers */
+            line-height: 1.2;
+            font-weight: 500;  /* Reduced from default 600/700 */
         }
-
-        .vc-grid {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 6rem;
+        h1 {
+            font-size: 2.5em;
+            margin-top: 0;  /* First heading doesn't need top margin */
         }
-
-        .vc-grid img {
-            height: 80px;
-            width: auto;
+        h2 {
+            font-size: 2em;
+        }
+        h3 {
+            font-size: 1.5em;
+        }
+        blockquote {
+            font-style: italic;
+            color: #555;
+            margin: 32px 0;
+            padding: 16px 32px;
+            border-left: 4px solid #333;
+            background: #f8f8f8;
+            font-weight: 300;  /* Added lighter font weight */
+        }
+        p {
+            margin-bottom: 24px;
+            font-size: 1.1em;
+            font-weight: 300;  /* Added lighter font weight */
+        }
+        ul {
+            margin: 24px 0;
+            padding-left: 24px;
+        }
+        li {
+            margin-bottom: 16px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 40px auto;
+            border-radius: 8px;
+        }
+        .brand-logo-hero {
+            width: 100%;
+            height: 6vh;  /* Reduced from 8vh */
+            min-height: 150px;  /* Reduced from 300px */
             object-fit: contain;
-            transition: all 0.5s ease;
-            opacity: 0.8;
+            margin: 48px 0;
+            background-color: white;
         }
-
-        .vc-grid img:first-child {
-            height: 100px;
-        }
-
-        .vc-grid img:hover {
-            opacity: 1;
-            transform: scale(1.05);
-        }
-
-        .contact {
-            text-align: center;
-            padding: 12rem 2rem;
-            background: #000;
-        }
-
-        .contact a {
-            color: #fff;
-            text-decoration: none;
-            border-bottom: 1px solid #fff;
-            padding-bottom: 0.2rem;
-            transition: all 0.3s ease;
-            font-weight: 300;
-            letter-spacing: 0.1em;
-        }
-
-        .contact a:hover {
-            color: #888;
-            border-color: #888;
-        }
-
-        @media (max-width: 1200px) {
-            .container {
-                grid-template-columns: 1fr;
-                gap: 4rem;
-            }
-            .section {
-                padding: 8rem 3rem;
-            }
-            h2 {
-                font-size: 3rem;
-            }
-        }
-
+        
+        /* Add responsive adjustments */
         @media (max-width: 768px) {
-            .hero-content h1 {
-                font-size: 3.5rem;
-                letter-spacing: 0.15em;
-                word-break: break-word;
-                padding: 0 1rem;
+            .container {
+                padding: 32px 24px;
             }
-            .hero-content p {
-                font-size: 1.2rem;
-            }
-            .section {
-                padding: 6rem 2rem;
+            h1 {
+                font-size: 2em;
             }
             h2 {
-                font-size: 2.5rem;
+                font-size: 1.75em;
             }
-            .vc-grid {
-                gap: 3rem;
-                flex-direction: column;
+            h3 {
+                font-size: 1.25em;
             }
-            .vc-grid img,
-            .vc-grid img:first-child {
-                height: 70px;
-            }
-            p {
-                font-size: 1.1rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero-content h1 {
-                font-size: 2.2rem;
-                letter-spacing: 0.1em;
-                word-break: break-word;
-                padding: 0 1rem;
-            }
-            .hero-content p {
-                font-size: 1rem;
-            }
-            h2 {
-                font-size: 2rem;
-            }
-            .section {
-                padding: 4rem 1.5rem;
-            }
-            .vc-grid img,
-            .vc-grid img:first-child {
-                height: 60px;
-            }
-        }
-
-        /* Luxury Scroll Animation */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: #000;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: #333;
-            border-radius: 4px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: #555;
         }
     </style>
 </head>
 <body>
-
-<section class="hero">
-    <div class="hero-content">
-        <h1>Dreamsleep</h1>
-        <p>Redefining the Art of Sleep</p>
-    </div>
-</section>
-
-<section class="section">
     <div class="container">
-        <div class="image-container">
-            <img src="product.jpg" alt="Dreamsleep Product">
-        </div>
-        <div class="content">
-            <h2>About Us</h2>
-            <p>Dreamsleep Healthcare is a private limited company headquartered in Bangalore, India. We build smart home devices that enhance health and well-being.</p>
+        <div class="layout-content" style="margin-left: -2px; margin-top: 8px;">
+            <div class="notion-page-content" style="flex-shrink: 0; flex-grow: 1; max-width: 100%; display: flex; align-items: flex-start; flex-direction: column; font-size: 16px; line-height: 1.5; width: 100%; z-index: 4; padding: 8px 0px 0px;">
+                <div data-block-id="1a47ae18-a174-80d4-a973-f7626ad1cd42" class="notion-selectable notion-image-block notion-caption-type-block" style="width: 100%; max-width: 1046px; align-self: center; margin-top: 4px; margin-bottom: 4px;">
+                    <div>
+                        <div contenteditable="false" data-content-editable-void="true">
+                            <div role="figure" aria-labelledby=":r4:">
+                                <div style="display: flex; width: fit-content;">
+                                    <div class="notion-cursor-default" style="position: relative; overflow: hidden; flex-grow: 1;">
+                                        <div style="position: relative;">
+                                            <div>
+                                                <div class="" style="width: 100%; height: 100%;"><img alt="Dreamspan Hero Banner" src="brand-logo.svg" class="brand-logo-hero"></div>
+                                            </div>
+                                        </div>
+                                        <div style="position: absolute; top: 4px; right: 4px; border-radius: 4px; color: white; fill: white; font-size: 11.5px; background: rgba(0, 0, 0, 0.6); display: flex; white-space: nowrap; align-items: center; height: 26px; max-width: calc(100% - 16px); overflow: hidden; pointer-events: none; opacity: 0; transition: opacity 200ms ease-in-out; font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, &quot;Segoe UI Variable Display&quot;, &quot;Segoe UI&quot;, Helvetica, &quot;Apple Color Emoji&quot;, Arial, sans-serif, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; z-index: 2;">
+                                            <div data-popup-origin="true" style="display: contents;">
+                                                <div role="button" tabindex="0" style="user-select: none; transition: opacity 200ms ease-in; cursor: pointer; display: flex; align-items: center; justify-content: center; flex-shrink: 0; width: 26px; height: 26px; fill: rgba(255, 255, 255, 0.443);"><svg aria-hidden="true" role="graphics-symbol" viewBox="0 0 16 16" class="ellipsis" style="width: 16px; height: 16px; display: block; fill: white; flex-shrink: 0;">
+                                                        <path d="M2.887 9.014c.273 0 .52-.064.738-.192.219-.132.394-.307.526-.526.133-.219.199-.46.199-.725 0-.405-.142-.747-.424-1.025a1.41 1.41 0 00-1.04-.417c-.264 0-.505.066-.724.198a1.412 1.412 0 00-.718 1.244c0 .265.064.506.192.725.132.219.307.394.526.526.219.128.46.192.725.192zm5.113 0a1.412 1.412 0 001.244-.718c.132-.219.198-.46.198-.725 0-.405-.14-.747-.423-1.025A1.386 1.386 0 008 6.129c-.264 0-.506.066-.725.198a1.412 1.412 0 00-.718 1.244c0 .265.064.506.192.725.132.219.308.394.526.526.22.128.46.192.725.192zm5.106 0c.265 0 .506-.064.725-.192.219-.132.394-.307.526-.526.133-.219.199-.46.199-.725 0-.405-.142-.747-.424-1.025a1.394 1.394 0 00-1.026-.417 1.474 1.474 0 00-1.265.718c-.127.218-.19.46-.19.724 0 .265.063.506.19.725.133.219.308.394.527.526.223.128.47.192.738.192z"></path>
+                                                </svg></div>
+                                            </div>
+                                        </div>
+                                        <div style="left: 0px; top: 0px; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.3); pointer-events: none; opacity: 0; position: absolute; transition: opacity 100ms ease-in-out;"></div>
+                                    </div>
+                                    <div style="position: relative; left: 0px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-block-id="1a47ae18-a174-80c3-b76e-e1e3482594bf" class="notion-selectable notion-text-block" style="width: 100%; max-width: 854px; margin-top: 1px; margin-bottom: 1px;">
+                    <div style="color: inherit; fill: inherit;">
+                        <div style="display: flex;">
+                            <div spellcheck="true" placeholder=" " contenteditable="false" data-content-editable-leaf="true" style="max-width: 100%; width: 100%; white-space: pre-wrap; word-break: break-word; caret-color: rgba(255, 255, 255, 0.81); padding: 3px 2px; min-height: 1em; color: rgba(255, 255, 255, 0.81); -webkit-text-fill-color: rgba(255, 255, 255, 0.282);"></div>
+                            <div style="position: relative; left: 0px;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div data-block-id="1a07ae18-a174-809f-bb71-c34ecd3148de" class="notion-selectable notion-quote-block" style="width: 100%; max-width: 854px; margin-top: 4px; margin-bottom: 4px;">
+
+                    <div style="border-left: 3px solid currentcolor; padding-left: 14px; padding-right: 14px; width: 100%;">
+                        <div spellcheck="true" placeholder="Empty quote" contenteditable="false" data-content-editable-leaf="true" style="max-width: 100%; width: 100%; white-space: pre-wrap; word-break: break-word; caret-color: rgba(255, 255, 255, 0.81); padding-left: 2px; padding-right: 2px;">"It is not the strongest or the most intelligent who will survive but those who can best manage change."</div>
+                        <div data-block-id="1a07ae18-a174-8075-bc93-e7a38cb8ecd1" class="notion-selectable notion-text-block start-of-content end-of-content" style="width: 100%; max-width: 100%; margin-top: 2px; margin-bottom: 0px;">
+                            <div style="color: inherit; fill: inherit;">
+                                <div style="display: flex;">
+                                    <div spellcheck="true" placeholder=" " contenteditable="false" data-content-editable-leaf="true" style="max-width: 100%; width: 100%; white-space: pre-wrap; word-break: break-word; caret-color: rgba(255, 255, 255, 0.81); padding: 3px 2px;">— <span style="font-weight:600" data-token-index="1" class="notion-enable-hover">Darwin</span></div>
+                                    <div style="position: relative; left: 14px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="position: relative; left: 0px;"></div>
+
+            </div>
+            <div data-block-id="1a27ae18-a174-80e0-bd0f-c9472d65649a" class="notion-selectable notion-text-block" style="width: 100%; max-width: 854px; margin-top: 1px; margin-bottom: 1px;">
+                <div style="color: inherit; fill: inherit;">
+                    <div style="display: flex;">
+                        <div spellcheck="true" placeholder=" " contenteditable="false" data-content-editable-leaf="true" style="max-width: 100%; width: 100%; white-space: pre-wrap; word-break: break-word; caret-color: rgba(255, 255, 255, 0.81); padding: 3px 2px; min-height: 1em; color: rgba(255, 255, 255, 0.81); -webkit-text-fill-color: rgba(255, 255, 255, 0.282);"></div>
+                        <div style="position: relative; left: 0px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div data-block-id="1a27ae18-a174-8028-95b2-f6b2505ccef1" class="notion-selectable notion-text-block" style="width: 100%; max-width: 854px; margin-top: 1px; margin-bottom: 1px;">
+                <div style="color: inherit; fill: inherit;">
+                    <div style="display: flex;">
+                        <div spellcheck="true" placeholder=" " contenteditable="false" data-content-editable-leaf="true" style="max-width: 100%; width: 100%; white-space: pre-wrap; word-break: break-word; caret-color: rgba(255, 255, 255, 0.81); padding: 3px 2px;"><br>Dreamspan is an evolution research and product company.</div>
+                        <div style="position: relative; left: 0px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div data-block-id="1a27ae18-a174-8039-8345-eddbcfc42aa4" class="notion-selectable notion-text-block" style="width: 100%; max-width: 854px; margin-top: 1px; margin-bottom: 1px;">
+                <div style="color: inherit; fill: inherit;">
+                    <div style="display: flex;">
+                        <div spellcheck="true" placeholder=" " contenteditable="false" data-content-editable-leaf="true" style="max-width: 100%; width: 100%; white-space: pre-wrap; word-break: break-word; caret-color: rgba(255, 255, 255, 0.81); padding: 3px 2px;">We're asking one fundamental question: <span style="font-weight:600" data-token-index="1" class="notion-enable-hover">what's the future of human healthspan?</span></div>
+                        <div style="position: relative; left: 0px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div data-block-id="1a27ae18-a174-806f-b934-f03577b78430" class="notion-selectable notion-text-block" style="width: 100%; max-width: 854px; margin-top: 1px; margin-bottom: 1px;">
+                <div style="color: inherit; fill: inherit;">
+                    <div style="display: flex;">
+                        <div spellcheck="true" placeholder=" " contenteditable="false" data-content-editable-leaf="true" style="max-width: 100%; width: 100%; white-space: pre-wrap; word-break: break-word; caret-color: rgba(255, 255, 255, 0.81); padding: 3px 2px;">We're building at the intersection of evolutionary biology &amp; current technologies.</div>
+                        <div style="position: relative; left: 0px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div data-block-id="1a27ae18-a174-807c-be5b-cbfc7f224d9f" class="notion-selectable notion-text-block" style="width: 100%; max-width: 854px; margin-top: 1px; margin-bottom: 1px;">
+                <div style="color: inherit; fill: inherit;">
+                    <div style="display: flex;">
+                        <div spellcheck="true" placeholder=" " contenteditable="false" data-content-editable-leaf="true" style="max-width: 100%; width: 100%; white-space: pre-wrap; word-break: break-word; caret-color: rgba(255, 255, 255, 0.81); padding: 3px 2px; min-height: 1em; color: rgba(255, 255, 255, 0.81); -webkit-text-fill-color: rgba(255, 255, 255, 0.282);"></div>
+                        <div style="position: relative; left: 0px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div data-block-id="1a27ae18-a174-80e9-9ed6-e07e75c07395" class="notion-selectable notion-sub_header-block" style="width: 100%; max-width: 854px; margin-top: 1.4em; margin-bottom: 1px;">
+                <div style="display: flex; width: 100%; color: inherit; fill: inherit;">
+                    <h3 spellcheck="true" placeholder="Heading 2" contenteditable="false" data-content-editable-leaf="true" style="max-width: 100%; width: 100%; white-space: pre-wrap; word-break: break-word; caret-color: rgba(255, 255, 255, 0.81); padding: 3px 2px; font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, &quot;Segoe UI Variable Display&quot;, &quot;Segoe UI&quot;, Helvetica, &quot;Apple Color Emoji&quot;, Arial, sans-serif, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-weight: 600; font-size: 1.5em; line-height: 1.3; margin: 0px;">The Problem</h3>
+                    <div style="position: relative; left: 0px;"></div>
+                </div>
+            </div>
+            <div data-block-id="1a07ae18-a174-800e-8667-c170f03a4b50" class="notion-selectable notion-text-block" style="width: 100%; max-width: 854px; margin-top: 1px; margin-bottom: 1px;">
+                <div style="color: inherit; fill: inherit;">
+                    <div style="display: flex;">
+                        <div spellcheck="true" placeholder=" " contenteditable="false" data-content-editable-leaf="true" style="max-width: 100%; width: 100%; white-space: pre-wrap; word-break: break-word; caret-color: rgba(255, 255, 255, 0.81); padding: 3px 2px;">Today, we find ourselves at a pivotal moment in human history: <span style="font-style:italic;font-weight:600" data-token-index="1" class="notion-enable-hover">our biology and modern environments have never been so fundamentally mismatched.</span></div>
+                        <div style="position: relative; left: 0px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div data-block-id="1a47ae18-a174-80b2-9d83-ce81ba0e4cd5" class="notion-selectable notion-image-block notion-caption-type-block" style="width: 100%; max-width: 1046px; align-self: center; margin-top: 4px; margin-bottom: 4px;">
+                <div>
+                    <div contenteditable="false" data-content-editable-void="true">
+                        <div role="figure" aria-labelledby=":r5:">
+                            <div style="display: flex; width: fit-content;">
+                                <div class="notion-cursor-default" style="position: relative; overflow: hidden; flex-grow: 1;">
+                                    <div style="position: relative;">
+                                        <div>
+                                            <div class="" style="width: 100%; height: 100%;"><img alt="" src="graph1.png"></div>
+                                        </div>
+                                    </div>
+                                    <div style="position: absolute; top: 4px; right: 4px; border-radius: 4px; color: white; fill: white; font-size: 11.5px; background: rgba(0, 0, 0, 0.6); display: flex; white-space: nowrap; align-items: center; height: 26px; max-width: calc(100% - 16px); overflow: hidden; pointer-events: none; opacity: 0; transition: opacity 200ms ease-in-out; font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, &quot;Segoe UI Variable Display&quot;, &quot;Segoe UI&quot;, Helvetica, &quot;Apple Color Emoji&quot;, Arial, sans-serif, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; z-index: 2;">
+                                        <div data-popup-origin="true" style="display: contents;">
+                                            <div role="button" tabindex="0" style="user-select: none; transition: opacity 200ms ease-in; cursor: pointer; display: flex; align-items: center; justify-content: center; flex-shrink: 0; width: 26px; height: 26px; fill: rgba(255, 255, 255, 0.443);"><svg aria-hidden="true" role="graphics-symbol" viewBox="0 0 16 16" class="ellipsis" style="width: 16px; height: 16px; display: block; fill: white; flex-shrink: 0;">
+                                                    <path d="M2.887 9.014c.273 0 .52-.064.738-.192.219-.132.394-.307.526-.526.133-.219.199-.46.199-.725 0-.405-.142-.747-.424-1.025a1.41 1.41 0 00-1.04-.417c-.264 0-.505.066-.724.198a1.412 1.412 0 00-.718 1.244c0 .265.064.506.192.725.132.219.307.394.526.526.219.128.46.192.725.192zm5.113 0a1.412 1.412 0 001.244-.718c.132-.219.198-.46.198-.725 0-.405-.14-.747-.423-1.025A1.386 1.386 0 008 6.129c-.264 0-.506.066-.725.198a1.412 1.412 0 00-.718 1.244c0 .265.064.506.192.725.132.219.308.394.526.526.22.128.46.192.725.192zm5.106 0c.265 0 .506-.064.725-.192.219-.132.394-.307.526-.526.133-.219.199-.46.199-.725 0-.405-.142-.747-.424-1.025a1.394 1.394 0 00-1.026-.417 1.474 1.474 0 00-1.265.718c-.127.218-.19.46-.19.724 0 .265.063.506.19.725.133.219.308.394.527.526.223.128.47.192.738.192z"></path>
+                                                </svg></div>
+                                        </div>
+                                    </div>
+                                    <div style="left: 0px; top: 0px; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.3); pointer-events: none; opacity: 0; position: absolute; transition: opacity 100ms ease-in-out;"></div>
+                                </div>
+                                <div style="position: relative; left: 0px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-block-id="1a07ae18-a174-8007-b444-d807cd20f35f" class="notion-selectable notion-text-block" style="width: 100%; max-width: 854px; margin-top: 1px; margin-bottom: 1px;">
+                <div style="color: inherit; fill: inherit;">
+                    <div style="display: flex;">
+                        <div spellcheck="true" placeholder=" " contenteditable="false" data-content-editable-leaf="true" style="max-width: 100%; width: 100%; white-space: pre-wrap; word-break: break-word; caret-color: rgba(255, 255, 255, 0.81); padding: 3px 2px; min-height: 1em; color: rgba(255, 255, 255, 0.81); -webkit-text-fill-color: rgba(255, 255, 255, 0.282);"></div>
+                        <div style="position: relative; left: 0px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div data-block-id="1a07ae18-a174-807d-96c3-d54f45d63ef5" class="notion-selectable notion-text-block" style="width: 100%; max-width: 854px; margin-top: 1px; margin-bottom: 1px;">
+                <div style="color: inherit; fill: inherit;">
+                    <div style="display: flex;">
+                        <div spellcheck="true" placeholder=" " contenteditable="false" data-content-editable-leaf="true" style="max-width: 100%; width: 100%; white-space: pre-wrap; word-break: break-word; caret-color: rgba(255, 255, 255, 0.81); padding: 3px 2px;">Humanity has seen three big revolutions—agricultural, industrial, digital—that changed everything. But our bodies still evolve at nature's slow pace.</div>
+                        <div style="position: relative; left: 0px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div data-block-id="1a07ae18-a174-8045-85e1-e3722ca52e72" class="notion-selectable notion-text-block" style="width: 100%; max-width: 854px; margin-top: 1px; margin-bottom: 1px;">
+                <div style="color: inherit; fill: inherit;">
+                    <div style="display: flex;">
+                        <div spellcheck="true" placeholder=" " contenteditable="false" data-content-editable-leaf="true" style="max-width: 100%; width: 100%; white-space: pre-wrap; word-break: break-word; caret-color: rgba(255, 255, 255, 0.81); padding: 3px 2px;">We have termed this mismatch between our fast-changing environment and slow-evolving biology the&nbsp;<span style="font-weight:600" data-token-index="1" class="notion-enable-hover">evolutionary delta</span>—a disconnect driving many of today's greatest health challenges.</div>
+                        <div style="position: relative; left: 0px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div data-block-id="1a07ae18-a174-8091-9b5f-e5e861754434" class="notion-selectable notion-text-block" style="width: 100%; max-width: 854px; margin-top: 1px; margin-bottom: 1px;">
+                <div style="color: inherit; fill: inherit;">
+                    <div style="display: flex;">
+                        <div spellcheck="true" placeholder=" " contenteditable="false" data-content-editable-leaf="true" style="max-width: 100%; width: 100%; white-space: pre-wrap; word-break: break-word; caret-color: rgba(255, 255, 255, 0.81); padding: 3px 2px; min-height: 1em; color: rgba(255, 255, 255, 0.81); -webkit-text-fill-color: rgba(255, 255, 255, 0.282);"></div>
+                        <div style="position: relative; left: 0px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div data-block-id="1a07ae18-a174-8068-9116-c7c602657ff8" class="notion-selectable notion-text-block" style="width: 100%; max-width: 854px; margin-top: 1px; margin-bottom: 1px;">
+                <div style="color: inherit; fill: inherit;">
+                    <div style="display: flex;">
+                        <div spellcheck="true" placeholder=" " contenteditable="false" data-content-editable-leaf="true" style="max-width: 100%; width: 100%; white-space: pre-wrap; word-break: break-word; caret-color: rgba(255, 255, 255, 0.81); padding: 3px 2px; min-height: 1em; color: rgba(255, 255, 255, 0.81); -webkit-text-fill-color: rgba(255, 255, 255, 0.282);"></div>
+                        <div style="position: relative; left: 0px;"></div>
+                    </div>
+                    <div style="padding-left: 1.5em; display: flex; flex-direction: column;">
+                        <div data-block-id="1a07ae18-a174-80a3-b5fd-f47adf4dca99" class="notion-selectable notion-text-block start-of-content end-of-content" style="width: 100%; max-width: 100%; margin-top: 2px; margin-bottom: 0px;">
+                            <div style="color: inherit; fill: inherit;">
+                                <div style="display: flex;">
+                                    <div spellcheck="true" placeholder=" " contenteditable="false" data-content-editable-leaf="true" style="max-width: 100%; width: 100%; white-space: pre-wrap; word-break: break-word; caret-color: rgba(255, 255, 255, 0.81); padding: 3px 2px; min-height: 1em; color: rgba(255, 255, 255, 0.81); -webkit-text-fill-color: rgba(255, 255, 255, 0.282);"></div>
+                                    <div style="position: relative; left: 0px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-block-id="1a07ae18-a174-80ec-b716-ff5da97a8ebf" class="notion-selectable notion-text-block" style="width: 100%; max-width: 854px; margin-top: 1px; margin-bottom: 1px;">
+                <div style="color: inherit; fill: inherit;">
+                    <div style="display: flex;">
+                        <div spellcheck="true" placeholder=" " contenteditable="false" data-content-editable-leaf="true" style="max-width: 100%; width: 100%; white-space: pre-wrap; word-break: break-word; caret-color: rgba(255, 255, 255, 0.81); padding: 3px 2px;">We have identified 3 broad evolutionary deltas:</div>
+                        <div style="position: relative; left: 0px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div data-block-id="1a07ae18-a174-8075-9096-f94424b8a4de" class="notion-selectable notion-sub_sub_header-block" style="width: 100%; max-width: 854px; margin-top: 1em; margin-bottom: 1px;">
+                <div style="display: flex; width: 100%; color: inherit; fill: inherit;">
+                    <h4 spellcheck="true" placeholder="Heading 3" contenteditable="false" data-content-editable-leaf="true" style="max-width: 100%; width: 100%; white-space: pre-wrap; word-break: break-word; caret-color: rgba(255, 255, 255, 0.81); padding: 3px 2px; font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, &quot;Segoe UI Variable Display&quot;, &quot;Segoe UI&quot;, Helvetica, &quot;Apple Color Emoji&quot;, Arial, sans-serif, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-weight: 600; font-size: 1.25em; line-height: 1.3; margin: 0px;">1. <span style="font-weight:600" data-token-index="1" class="notion-enable-hover">Evolutionary Lag</span></h4>
+                    <div style="position: relative; left: 0px;"></div>
+                </div>
+            </div>
+            <div data-block-id="1a07ae18-a174-805f-8fdd-e0e8c37ef219" class="notion-selectable notion-text-block" style="width: 100%; max-width: 854px; margin-top: 1px; margin-bottom: 1px;">
+                <div style="color: inherit; fill: inherit;">
+                    <div style="display: flex;">
+                        <div spellcheck="true" placeholder=" " contenteditable="false" data-content-editable-leaf="true" style="max-width: 100%; width: 100%; white-space: pre-wrap; word-break: break-word; caret-color: rgba(255, 255, 255, 0.81); padding: 3px 2px;">A mismatch where biological systems evolve too slowly to keep pace with rapid environmental change.</div>
+                        <div style="position: relative; left: 0px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div data-block-id="1a07ae18-a174-80d8-aa79-f20f5e47c5ab" class="notion-selectable notion-text-block" style="width: 100%; max-width: 854px; margin-top: 1px; margin-bottom: 1px;">
+                <div style="color: inherit; fill: inherit;">
+                    <div style="display: flex;">
+                        <div spellcheck="true" placeholder=" " contenteditable="false" data-content-editable-leaf="true" style="max-width: 100%; width: 100%; white-space: pre-wrap; word-break: break-word; caret-color: rgba(255, 255, 255, 0.81); padding: 3px 2px; min-height: 1em; color: rgba(255, 255, 255, 0.81); -webkit-text-fill-color: rgba(255, 255, 255, 0.282);"></div>
+                        <div style="position: relative; left: 0px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div data-block-id="1a07ae18-a174-80fc-a430-ee25b8148c72" class="notion-selectable notion-text-block" style="width: 100%; max-width: 854px; margin-top: 1px; margin-bottom: 1px;">
+                <div style="color: inherit; fill: inherit;">
+                    <div style="display: flex;">
+                        <div spellcheck="true" placeholder=" " contenteditable="false" data-content-editable-leaf="true" style="max-width: 100%; width: 100%; white-space: pre-wrap; word-break: break-word; caret-color: rgba(255, 255, 255, 0.81); padding: 3px 2px;"><span style="font-weight:600" data-token-index="0" class="notion-enable-hover">Example: The Respiratory System</span></div>
+                        <div style="position: relative; left: 0px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div data-block-id="1a07ae18-a174-808a-99c7-d6c39cf93762" class="notion-selectable notion-text-block" style="width: 100%; max-width: 854px; margin-top: 1px; margin-bottom: 1px;">
+                <div style="color: inherit; fill: inherit;">
+                    <div style="display: flex;">
+                        <div spellcheck="true" placeholder=" " contenteditable="false" data-content-editable-leaf="true" style="max-width: 100%; width: 100%; white-space: pre-wrap; word-break: break-word; caret-color: rgba(255, 255, 255, 0.81); padding: 3px 2px;">Our respiratory system evolved to deal with the natural particulates of an old world. Today, our air is filled with modern pollutants—vehicle exhaust, industrial emissions, and indoor fumes that our bodies never anticipated.</div>
+                        <div style="position: relative; left: 0px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div data-block-id="1a07ae18-a174-8067-9b0b-ce163af6ceb6" class="notion-selectable notion-quote-block" style="width: 100%; max-width: 854px; margin-top: 4px; margin-bottom: 4px;">
+                
+                    <div style="border-left: 3px solid currentcolor; padding-left: 14px; padding-right: 14px; width: 100%;">
+                        <div spellcheck="true" placeholder="Empty quote" contenteditable="false" data-content-editable-leaf="true" style="max-width: 100%; width: 100%; white-space: pre-wrap; word-break: break-word; caret-color: rgba(255, 255, 255, 0.81); padding-left: 2px; padding-right: 2px;">The Problem: Our respiratory system hasn't yet evolved to handle modern pollutants.</div>
+                    </div>
+                    <div style="position: relative; left: 0px;"></div>
+                
+            </div>
+            <div data-block-id="1a07ae18-a174-8003-8850-ca062a5456c6" class="notion-selectable notion-text-block" style="width: 100%; max-width: 854px; margin-top: 1px; margin-bottom: 1px;">
+                <div style="color: inherit; fill: inherit;">
+                    <div style="display: flex;">
+                        <div spellcheck="true" placeholder=" " contenteditable="false" data-content-editable-leaf="true" style="max-width: 100%; width: 100%; white-space: pre-wrap; word-break: break-word; caret-color: rgba(255, 255, 255, 0.81); padding: 3px 2px; min-height: 1em; color: rgba(255, 255, 255, 0.81); -webkit-text-fill-color: rgba(255, 255, 255, 0.282);"></div>
+                        <div style="position: relative; left: 0px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div data-block-id="1a07ae18-a174-80ce-8a34-d8f172990492" class="notion-selectable notion-divider-block" style="width: 100%; max-width: 854px; margin-top: 1px; margin-bottom: 1px;">
+                <div class="notion-cursor-default" style="display: flex; align-items: center; justify-content: center; pointer-events: auto; width: 100%; height: 13px; flex: 0 0 auto; color: rgba(255, 255, 255, 0.13);">
+                    <div role="separator" style="width: 100%; height: 1px; visibility: visible; border-bottom: 1px solid rgba(255, 255, 255, 0.13);"></div>
+                </div>
+            </div>
+            <div data-block-id="1a07ae18-a174-8032-b68f-d37b23cf8da2" class="notion-selectable notion-text-block" style="width: 100%; max-width: 854px; margin-top: 1px; margin-bottom: 1px;">
+                <div style="color: inherit; fill: inherit;">
+                    <div style="display: flex;">
+                        <div spellcheck="true" placeholder=" " contenteditable="false" data-content-editable-leaf="true" style="max-width: 100%; width: 100%; white-space: pre-wrap; word-break: break-word; caret-color: rgba(255, 255, 255, 0.81); padding: 3px 2px; min-height: 1em; color: rgba(255, 255, 255, 0.81); -webkit-text-fill-color: rgba(255, 255, 255, 0.282);"></div>
+                        <div style="position: relative; left: 0px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div data-block-id="1a07ae18-a174-80e4-84e1-f98d84c3ed4f" class="notion-selectable notion-sub_sub_header-block" style="width: 100%; max-width: 854px; margin-top: 1em; margin-bottom: 1px;">
+                <div style="display: flex; width: 100%; color: inherit; fill: inherit;">
+                    <h4 spellcheck="true" placeholder="Heading 3" contenteditable="false" data-content-editable-leaf="true" style="max-width: 100%; width: 100%; white-space: pre-wrap; word-break: break-word; caret-color: rgba(255, 255, 255, 0.81); padding: 3px 2px; font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, &quot;Segoe UI Variable Display&quot;, &quot;Segoe UI&quot;, Helvetica, &quot;Apple Color Emoji&quot;, Arial, sans-serif, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-weight: 600; font-size: 1.25em; line-height: 1.3; margin: 0px;">2. <span style="font-weight:600" data-token-index="1" class="notion-enable-hover">Evolutionary Misalignment</span></h4>
+                    <div style="position: relative; left: 0px;"></div>
+                </div>
+            </div>
+            <div data-block-id="1a07ae18-a174-8061-a008-cec85c34791e" class="notion-selectable notion-text-block" style="width: 100%; max-width: 854px; margin-top: 1px; margin-bottom: 1px;">
+                <div style="color: inherit; fill: inherit;">
+                    <div style="display: flex;">
+                        <div spellcheck="true" placeholder=" " contenteditable="false" data-content-editable-leaf="true" style="max-width: 100%; width: 100%; white-space: pre-wrap; word-break: break-word; caret-color: rgba(255, 255, 255, 0.81); padding: 3px 2px;">Traits that were adaptive in ancestral environments but are maladaptive in modern contexts due to altered conditions.</div>
+                        <div style="position: relative; left: 0px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div data-block-id="1a07ae18-a174-8031-aaf1-cc68667af4cf" class="notion-selectable notion-text-block" style="width: 100%; max-width: 854px; margin-top: 1px; margin-bottom: 1px;">
+                <div style="color: inherit; fill: inherit;">
+                    <div style="display: flex;">
+                        <div spellcheck="true" placeholder=" " contenteditable="false" data-content-editable-leaf="true" style="max-width: 100%; width: 100%; white-space: pre-wrap; word-break: break-word; caret-color: rgba(255, 255, 255, 0.81); padding: 3px 2px; min-height: 1em; color: rgba(255, 255, 255, 0.81); -webkit-text-fill-color: rgba(255, 255, 255, 0.282);"></div>
+                        <div style="position: relative; left: 0px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div data-block-id="1a07ae18-a174-800d-8265-ef5dfa80d3b2" class="notion-selectable notion-text-block" style="width: 100%; max-width: 854px; margin-top: 1px; margin-bottom: 1px;">
+                <div style="color: inherit; fill: inherit;">
+                    <div style="display: flex;">
+                        <div spellcheck="true" placeholder=" " contenteditable="false" data-content-editable-leaf="true" style="max-width: 100%; width: 100%; white-space: pre-wrap; word-break: break-word; caret-color: rgba(255, 255, 255, 0.81); padding: 3px 2px;"><span style="font-weight:600" data-token-index="0" class="notion-enable-hover">Example: The Metabolic Reward System</span></div>
+                        <div style="position: relative; left: 0px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div data-block-id="1a07ae18-a174-8094-921e-c3236fa3f724" class="notion-selectable notion-text-block" style="width: 100%; max-width: 854px; margin-top: 1px; margin-bottom: 1px;">
+                <div style="color: inherit; fill: inherit;">
+                    <div style="display: flex;">
+                        <div spellcheck="true" placeholder=" " contenteditable="false" data-content-editable-leaf="true" style="max-width: 100%; width: 100%; white-space: pre-wrap; word-break: break-word; caret-color: rgba(255, 255, 255, 0.81); padding: 3px 2px;">Our bodies evolved in environments where sugar was scarce—a critical source of quick energy that signaled survival. This scarcity triggered a robust dopamine response to sugar consumption. In our current post-scarcity world, however, the abundance of sugar has transformed this once-beneficial trait into a liability.</div>
+                        <div style="position: relative; left: 0px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div data-block-id="1a07ae18-a174-80db-9eaa-e961eb936d5d" class="notion-selectable notion-bulleted_list-block notion-synthetic-group-block" style="width: 100%; max-width: 854px; margin-top: 1px; margin-bottom: 1px;">
+                <div style="display: flex; align-items: flex-start; width: 100%; padding-left: 2px; color: inherit; fill: inherit;">
+                    <div contenteditable="false" class="notion-list-item-box-left pseudoSelection" data-content-editable-void="true" data-text-edit-side="start" style="user-select: none; --pseudoSelection--background: transparent; margin-right: 2px; width: 24px; display: flex; align-items: center; justify-content: center; flex-grow: 0; flex-shrink: 0; min-height: calc(1.5em + 6px);">
+                        <div class="pseudoBefore" style="font-size: 1.5em; line-height: 1; margin-bottom: 0px; --pseudoBefore--fontFamily: Arial; --pseudoBefore--content: &quot;•&quot;;"></div>
+                    </div>
+                    <div style="flex: 1 1 0px; min-width: 1px; display: flex; flex-direction: column;">
+                        <div style="display: flex;">
+                            <div spellcheck="true" placeholder="List" contenteditable="false" data-content-editable-leaf="true" style="max-width: 100%; width: 100%; white-space: pre-wrap; word-break: break-word; caret-color: rgba(255, 255, 255, 0.81); padding: 3px 2px; text-align: start;"><br>In <span style="font-weight:600" data-token-index="1" class="notion-enable-hover">1700</span>, people consumed roughly <span style="font-weight:600" data-token-index="3" class="notion-enable-hover">4 pounds/year</span> of sugar. By <span style="font-weight:600" data-token-index="5" class="notion-enable-hover">2012</span>, that number had soared to <span style="font-weight:600" data-token-index="7" class="notion-enable-hover">180 pounds/year</span>.</div>
+                            <div style="position: relative; left: 0px;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-block-id="1a07ae18-a174-80ec-b020-c1d9dc2bd4f5" class="notion-selectable notion-quote-block" style="width: 100%; max-width: 854px; margin-top: 4px; margin-bottom: 4px;">
+                
+                    <div style="border-left: 3px solid currentcolor; padding-left: 14px; padding-right: 14px; width: 100%;">
+                        <div spellcheck="true" placeholder="Empty quote" contenteditable="false" data-content-editable-leaf="true" style="max-width: 100%; width: 100%; white-space: pre-wrap; word-break: break-word; caret-color: rgba(255, 255, 255, 0.81); padding-left: 2px; padding-right: 2px;">The Problem: Our metabolic reward system, optimized for scarcity, now drives chronic conditions such as obesity, diabetes, and heart disease in an age of abundance.</div>
+                    </div>
+                    <div style="position: relative; left: 0px;"></div>
+                
+            </div>
+            <div data-block-id="1a07ae18-a174-8021-b7cc-fb1a6350a67c" class="notion-selectable notion-divider-block" style="width: 100%; max-width: 854px; margin-top: 1px; margin-bottom: 1px;">
+                <div class="notion-cursor-default" style="display: flex; align-items: center; justify-content: center; pointer-events: auto; width: 100%; height: 13px; flex: 0 0 auto; color: rgba(255, 255, 255, 0.13);">
+                    <div role="separator" style="width: 100%; height: 1px; visibility: visible; border-bottom: 1px solid rgba(255, 255, 255, 0.13);"></div>
+                </div>
+            </div>
+            <div data-block-id="1a07ae18-a174-8009-9e1e-d73fdcab6c67" class="notion-selectable notion-text-block" style="width: 100%; max-width: 854px; margin-top: 1px; margin-bottom: 1px;">
+                <div style="color: inherit; fill: inherit;">
+                    <div style="display: flex;">
+                        <div spellcheck="true" placeholder=" " contenteditable="false" data-content-editable-leaf="true" style="max-width: 100%; width: 100%; white-space: pre-wrap; word-break: break-word; caret-color: rgba(255, 255, 255, 0.81); padding: 3px 2px; min-height: 1em; color: rgba(255, 255, 255, 0.81); -webkit-text-fill-color: rgba(255, 255, 255, 0.282);"></div>
+                        <div style="position: relative; left: 0px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div data-block-id="1a07ae18-a174-800c-b3e2-fb127e29938c" class="notion-selectable notion-sub_sub_header-block" style="width: 100%; max-width: 854px; margin-top: 1em; margin-bottom: 1px;">
+                <div style="display: flex; width: 100%; color: inherit; fill: inherit;">
+                    <h4 spellcheck="true" placeholder="Heading 3" contenteditable="false" data-content-editable-leaf="true" style="max-width: 100%; width: 100%; white-space: pre-wrap; word-break: break-word; caret-color: rgba(255, 255, 255, 0.81); padding: 3px 2px; font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, &quot;Segoe UI Variable Display&quot;, &quot;Segoe UI&quot;, Helvetica, &quot;Apple Color Emoji&quot;, Arial, sans-serif, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-weight: 600; font-size: 1.25em; line-height: 1.3; margin: 0px;">3. <span style="font-weight:600" data-token-index="1" class="notion-enable-hover">Evolutionary Bug</span></h4>
+                    <div style="position: relative; left: 0px;"></div>
+                </div>
+            </div>
+            <div data-block-id="1a07ae18-a174-8099-b27d-fd4f9dcac474" class="notion-selectable notion-text-block" style="width: 100%; max-width: 854px; margin-top: 1px; margin-bottom: 1px;">
+                <div style="color: inherit; fill: inherit;">
+                    <div style="display: flex;">
+                        <div spellcheck="true" placeholder=" " contenteditable="false" data-content-editable-leaf="true" style="max-width: 100%; width: 100%; white-space: pre-wrap; word-break: break-word; caret-color: rgba(255, 255, 255, 0.81); padding: 3px 2px;">Flaws or trade-offs in evolved systems that create vulnerabilities.</div>
+                        <div style="position: relative; left: 0px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div data-block-id="1a07ae18-a174-80e1-9154-d72ab1908d6d" class="notion-selectable notion-text-block" style="width: 100%; max-width: 854px; margin-top: 1px; margin-bottom: 1px;">
+                <div style="color: inherit; fill: inherit;">
+                    <div style="display: flex;">
+                        <div spellcheck="true" placeholder=" " contenteditable="false" data-content-editable-leaf="true" style="max-width: 100%; width: 100%; white-space: pre-wrap; word-break: break-word; caret-color: rgba(255, 255, 255, 0.81); padding: 3px 2px; min-height: 1em; color: rgba(255, 255, 255, 0.81); -webkit-text-fill-color: rgba(255, 255, 255, 0.282);"></div>
+                        <div style="position: relative; left: 0px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div data-block-id="1a07ae18-a174-8057-b9c5-cc45d1e1b97e" class="notion-selectable notion-text-block" style="width: 100%; max-width: 854px; margin-top: 1px; margin-bottom: 1px;">
+                <div style="color: inherit; fill: inherit;">
+                    <div style="display: flex;">
+                        <div spellcheck="true" placeholder=" " contenteditable="false" data-content-editable-leaf="true" style="max-width: 100%; width: 100%; white-space: pre-wrap; word-break: break-word; caret-color: rgba(255, 255, 255, 0.81); padding: 3px 2px;"><span style="font-weight:600" data-token-index="0" class="notion-enable-hover">Example: The Challenge of Sleep</span></div>
+                        <div style="position: relative; left: 0px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div data-block-id="1a07ae18-a174-8061-b7b9-e301b95f6796" class="notion-selectable notion-text-block" style="width: 100%; max-width: 854px; margin-top: 1px; margin-bottom: 1px;">
+                <div style="color: inherit; fill: inherit;">
+                    <div style="display: flex;">
+                        <div spellcheck="true" placeholder=" " contenteditable="false" data-content-editable-leaf="true" style="max-width: 100%; width: 100%; white-space: pre-wrap; word-break: break-word; caret-color: rgba(255, 255, 255, 0.81); padding: 3px 2px;">Sleep is a biological necessity, but evolution has left us with a flawed design. During REM sleep—the phase where our brains consolidate memories, process emotions, and refine learning—our bodies face an evolutionary trade-off. To prevent us from physically acting out our vivid dreams, the brain hijacks the hypothalamus to induce temporary muscle paralysis. Yet this survival mechanism also sabotages a critical function: the hypothalamus's ability to regulate body temperature. In non-ideal ambient temperatures, this flaw forces the brain to prematurely exit REM sleep—sacrificing cognitive restoration for survival. </div>
+                        <div style="position: relative; left: 0px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div data-block-id="1a07ae18-a174-8080-83a9-f7e6b59d00d8" class="notion-selectable notion-quote-block" style="width: 100%; max-width: 854px; margin-top: 4px; margin-bottom: 4px;">
+                
+                    <div style="border-left: 3px solid currentcolor; padding-left: 14px; padding-right: 14px; width: 100%;">
+                        <div spellcheck="true" placeholder="Empty quote" contenteditable="false" data-content-editable-leaf="true" style="max-width: 100%; width: 100%; white-space: pre-wrap; word-break: break-word; caret-color: rgba(255, 255, 255, 0.81); padding-left: 2px; padding-right: 2px;">The Problem: We're left with a paradox: the same system designed to protect us during dreams actively undermines the quality of our rest.</div>
+                    </div>
+                    <div style="position: relative; left: 0px;"></div>
+
+            </div>
+            <div data-block-id="1a07ae18-a174-8018-914c-cbed3767005e" class="notion-selectable notion-text-block" style="width: 100%; max-width: 854px; margin-top: 1px; margin-bottom: 1px;">
+                <div style="color: inherit; fill: inherit;">
+                    <div style="display: flex;">
+                        <div spellcheck="true" placeholder=" " contenteditable="false" data-content-editable-leaf="true" style="max-width: 100%; width: 100%; white-space: pre-wrap; word-break: break-word; caret-color: rgba(255, 255, 255, 0.81); padding: 3px 2px; min-height: 1em; color: rgba(255, 255, 255, 0.81); -webkit-text-fill-color: rgba(255, 255, 255, 0.282);"></div>
+                        <div style="position: relative; left: 0px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div data-block-id="1a07ae18-a174-80c7-81f8-d038c512f110" class="notion-selectable notion-sub_header-block" style="width: 100%; max-width: 854px; margin-top: 1.4em; margin-bottom: 1px;">
+                <div style="display: flex; width: 100%; color: inherit; fill: inherit;">
+                    <h3 spellcheck="true" placeholder="Heading 2" contenteditable="false" data-content-editable-leaf="true" style="max-width: 100%; width: 100%; white-space: pre-wrap; word-break: break-word; caret-color: rgba(255, 255, 255, 0.81); padding: 3px 2px; font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, &quot;Segoe UI Variable Display&quot;, &quot;Segoe UI&quot;, Helvetica, &quot;Apple Color Emoji&quot;, Arial, sans-serif, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-weight: 600; font-size: 1.5em; line-height: 1.3; margin: 0px;">Our Vision</h3>
+                    <div style="position: relative; left: 0px;"></div>
+                </div>
+            </div>
+            <div data-block-id="1a07ae18-a174-80f0-8f26-e204bba307f4" class="notion-selectable notion-text-block" style="width: 100%; max-width: 854px; margin-top: 1px; margin-bottom: 1px;">
+                <div style="color: inherit; fill: inherit;">
+                    <div style="display: flex;">
+                        <div spellcheck="true" placeholder=" " contenteditable="false" data-content-editable-leaf="true" style="max-width: 100%; width: 100%; white-space: pre-wrap; word-break: break-word; caret-color: rgba(255, 255, 255, 0.81); padding: 3px 2px;">At Dreamspan, our vision is to <span style="font-weight:600" data-token-index="1" class="notion-enable-hover">bridge evolutionary deltas to advance the human healthspan.</span></div>
+                        <div style="position: relative; left: 0px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div data-block-id="1a47ae18-a174-8034-81f8-cfb064f94ff0" class="notion-selectable notion-text-block" style="width: 100%; max-width: 854px; margin-top: 1px; margin-bottom: 1px;">
+                <div style="color: inherit; fill: inherit;">
+                    <div style="display: flex;">
+                        <div spellcheck="true" placeholder=" " contenteditable="false" data-content-editable-leaf="true" style="max-width: 100%; width: 100%; white-space: pre-wrap; word-break: break-word; caret-color: rgba(255, 255, 255, 0.81); padding: 3px 2px; min-height: 1em; color: rgba(255, 255, 255, 0.81); -webkit-text-fill-color: rgba(255, 255, 255, 0.282);"></div>
+                        <div style="position: relative; left: 0px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div data-block-id="1a07ae18-a174-803c-9c0c-ef456f975487" class="notion-selectable notion-text-block" style="width: 100%; max-width: 854px; margin-top: 1px; margin-bottom: 1px;">
+                <div style="color: inherit; fill: inherit;">
+                    <div style="display: flex;">
+                        <div spellcheck="true" placeholder=" " contenteditable="false" data-content-editable-leaf="true" style="max-width: 100%; width: 100%; white-space: pre-wrap; word-break: break-word; caret-color: rgba(255, 255, 255, 0.81); padding: 3px 2px;">We believe the next revolution will be a healthspan revolution.</div>
+                        <div style="position: relative; left: 0px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div data-block-id="1a47ae18-a174-8017-8363-c8687a726860" class="notion-selectable notion-text-block" style="width: 100%; max-width: 854px; margin-top: 1px; margin-bottom: 1px;">
+                <div style="color: inherit; fill: inherit;">
+                    <div style="display: flex;">
+                        <div spellcheck="true" placeholder=" " contenteditable="false" data-content-editable-leaf="true" style="max-width: 100%; width: 100%; white-space: pre-wrap; word-break: break-word; caret-color: rgba(255, 255, 255, 0.81); padding: 3px 2px; min-height: 1em; color: rgba(255, 255, 255, 0.81); -webkit-text-fill-color: rgba(255, 255, 255, 0.282);"></div>
+                        <div style="position: relative; left: 0px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div data-block-id="1a27ae18-a174-80a8-aa27-e96c9389bf25" class="notion-selectable notion-text-block" style="width: 100%; max-width: 854px; margin-top: 1px; margin-bottom: 1px;">
+                <div style="color: inherit; fill: inherit;">
+                    <div style="display: flex;">
+                        <div spellcheck="true" placeholder=" " contenteditable="false" data-content-editable-leaf="true" style="max-width: 100%; width: 100%; white-space: pre-wrap; word-break: break-word; caret-color: rgba(255, 255, 255, 0.81); padding: 3px 2px;">Our company's one true metric: <span style="font-style:italic;font-weight:600" data-token-index="1" class="notion-enable-hover">the amount of time we add to the human healthspan.</span></div>
+                        <div style="position: relative; left: 0px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div data-block-id="1a47ae18-a174-80ee-9fdf-f66a10e4f7a5" class="notion-selectable notion-image-block notion-caption-type-block" style="width: 100%; max-width: 1046px; align-self: center; margin-top: 4px; margin-bottom: 4px;">
+                <div>
+                    <div contenteditable="false" data-content-editable-void="true">
+                        <div role="figure" aria-labelledby=":r6:">
+                            <div style="display: flex; width: fit-content;">
+                                <div class="notion-cursor-default" style="position: relative; overflow: hidden; flex-grow: 1;">
+                                    <div style="position: relative;">
+                                        <div>
+                                            <div class="" style="width: 100%; height: 100%;"><img alt="" src="graph2.png"></div>
+                                        </div>
+                                    </div>
+                                    <div style="position: absolute; top: 4px; right: 4px; border-radius: 4px; color: white; fill: white; font-size: 11.5px; background: rgba(0, 0, 0, 0.6); display: flex; white-space: nowrap; align-items: center; height: 26px; max-width: calc(100% - 16px); overflow: hidden; pointer-events: none; opacity: 0; transition: opacity 200ms ease-in-out; font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, &quot;Segoe UI Variable Display&quot;, &quot;Segoe UI&quot;, Helvetica, &quot;Apple Color Emoji&quot;, Arial, sans-serif, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; z-index: 2;">
+                                        <div data-popup-origin="true" style="display: contents;">
+                                            <div role="button" tabindex="0" style="user-select: none; transition: opacity 200ms ease-in; cursor: pointer; display: flex; align-items: center; justify-content: center; flex-shrink: 0; width: 26px; height: 26px; fill: rgba(255, 255, 255, 0.443);"><svg aria-hidden="true" role="graphics-symbol" viewBox="0 0 16 16" class="ellipsis" style="width: 16px; height: 16px; display: block; fill: white; flex-shrink: 0;">
+                                                    <path d="M2.887 9.014c.273 0 .52-.064.738-.192.219-.132.394-.307.526-.526.133-.219.199-.46.199-.725 0-.405-.142-.747-.424-1.025a1.41 1.41 0 00-1.04-.417c-.264 0-.505.066-.724.198a1.412 1.412 0 00-.718 1.244c0 .265.064.506.192.725.132.219.307.394.526.526.219.128.46.192.725.192zm5.113 0a1.412 1.412 0 001.244-.718c.132-.219.198-.46.198-.725 0-.405-.14-.747-.423-1.025A1.386 1.386 0 008 6.129c-.264 0-.506.066-.725.198a1.412 1.412 0 00-.718 1.244c0 .265.064.506.192.725.132.219.308.394.526.526.22.128.46.192.725.192zm5.106 0c.265 0 .506-.064.725-.192.219-.132.394-.307.526-.526.133-.219.199-.46.199-.725 0-.405-.142-.747-.424-1.025a1.394 1.394 0 00-1.026-.417 1.474 1.474 0 00-1.265.718c-.127.218-.19.46-.19.724 0 .265.063.506.19.725.133.219.308.394.527.526.223.128.47.192.738.192z"></path>
+                                                </svg></div>
+                                        </div>
+                                    </div>
+                                    <div style="left: 0px; top: 0px; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.3); pointer-events: none; opacity: 0; position: absolute; transition: opacity 100ms ease-in-out;"></div>
+                                </div>
+                                <div style="position: relative; left: 0px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-block-id="1a07ae18-a174-80fb-b6e0-c2fa3cb9bc1e" class="notion-selectable notion-text-block" style="width: 100%; max-width: 854px; margin-top: 1px; margin-bottom: 1px;">
+                <div style="color: inherit; fill: inherit;">
+                    <div style="display: flex;">
+                        <div spellcheck="true" placeholder=" " contenteditable="false" data-content-editable-leaf="true" style="max-width: 100%; width: 100%; white-space: pre-wrap; word-break: break-word; caret-color: rgba(255, 255, 255, 0.81); padding: 3px 2px; min-height: 1em; color: rgba(255, 255, 255, 0.81); -webkit-text-fill-color: rgba(255, 255, 255, 0.282);"></div>
+                        <div style="position: relative; left: 0px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div data-block-id="1a07ae18-a174-80bf-8381-d8c998508b03" class="notion-selectable notion-text-block" style="width: 100%; max-width: 854px; margin-top: 1px; margin-bottom: 1px;">
+                <div style="color: inherit; fill: inherit;">
+                    <div style="display: flex;">
+                        <div spellcheck="true" placeholder=" " contenteditable="false" data-content-editable-leaf="true" style="max-width: 100%; width: 100%; white-space: pre-wrap; word-break: break-word; caret-color: rgba(255, 255, 255, 0.81); padding: 3px 2px;">Sahu,</div>
+                        <div style="position: relative; left: 0px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div data-block-id="1a07ae18-a174-80a6-b552-f8373cd9273f" class="notion-selectable notion-text-block" style="width: 100%; max-width: 854px; margin-top: 1px; margin-bottom: 1px;">
+                <div style="color: inherit; fill: inherit;">
+                    <div style="display: flex;">
+                        <div spellcheck="true" placeholder=" " contenteditable="false" data-content-editable-leaf="true" style="max-width: 100%; width: 100%; white-space: pre-wrap; word-break: break-word; caret-color: rgba(255, 255, 255, 0.81); padding: 3px 2px;">Founder, Dreamspan</div>
+                        <div style="position: relative; left: 0px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div data-block-id="1a07ae18-a174-8071-beaf-ec991c481ccc" class="notion-selectable notion-text-block" style="width: 100%; max-width: 854px; margin-top: 1px; margin-bottom: 1px;">
+                <div style="color: inherit; fill: inherit;">
+                    <div style="display: flex;">
+                        <div spellcheck="true" placeholder=" " contenteditable="false" data-content-editable-leaf="true" style="max-width: 100%; width: 100%; white-space: pre-wrap; word-break: break-word; caret-color: rgba(255, 255, 255, 0.81); padding: 3px 2px; min-height: 1em; color: rgba(255, 255, 255, 0.81); -webkit-text-fill-color: rgba(255, 255, 255, 0.282);"></div>
+                        <div style="position: relative; left: 0px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div data-block-id="1a07ae18-a174-80a4-bbaf-c27781a6e855" class="notion-selectable notion-text-block" style="width: 100%; max-width: 854px; margin-top: 1px; margin-bottom: 1px;">
+                <div style="color: inherit; fill: inherit;">
+                    <div style="display: flex;">
+                        <div spellcheck="true" placeholder=" " contenteditable="false" data-content-editable-leaf="true" style="max-width: 100%; width: 100%; white-space: pre-wrap; word-break: break-word; caret-color: rgba(255, 255, 255, 0.81); padding: 3px 2px; min-height: 1em; color: rgba(255, 255, 255, 0.81); -webkit-text-fill-color: rgba(255, 255, 255, 0.282);"></div>
+                        <div style="position: relative; left: 0px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div data-block-id="1a07ae18-a174-80bf-a87e-d90b4af2b456" class="notion-selectable notion-text-block end-of-content" style="width: 100%; max-width: 854px; margin-top: 1px; margin-bottom: 0px;">
+                <div style="color: inherit; fill: inherit;">
+                    <div style="display: flex;">
+                        <div spellcheck="true" placeholder=" " contenteditable="false" data-content-editable-leaf="true" style="max-width: 100%; width: 100%; white-space: pre-wrap; word-break: break-word; caret-color: rgba(255, 255, 255, 0.81); padding: 3px 2px; min-height: 1em; color: rgba(255, 255, 255, 0.81); -webkit-text-fill-color: rgba(255, 255, 255, 0.282);"></div>
+                        <div style="position: relative; left: 0px;"></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</section>
-
-<section class="section">
-    <div class="container">
-        <div class="content">
-            <h2>The Problem</h2>
-            <p>Over 100 million people in the US alone are sleep-deprived. Sleep deprivation significantly increases the risk of major chronic health problems.</p>
-        </div>
-        <div class="image-container">
-            <img src="sleep-deprivation.jpg" alt="Sleep Deprivation">
-        </div>
+</div>
     </div>
-</section>
-
-<section class="section">
-    <div class="container">
-        <div class="image-container">
-            <img src="bedroom.jpg" alt="Product Features">
-        </div>
-        <div class="content">
-            <h2>Our Product</h2>
-            <p><strong>Mattress Temperature Controller:</strong> Dynamically optimizes mattress temperature, improving sleep quality by up to 32%.</p>
-        </div>
-    </div>
-</section>
-
-<section class="vc-section">
-    <div class="vc-container">
-        <h2 class="vc-title">Backed By Industry Leaders</h2>
-        <div class="vc-grid">
-            <img src="de-vc.jpg" alt="VC Logo 1">
-            <img src="better-vc.jpg" alt="VC Logo 2">
-        </div>
-    </div>
-</section>
-
-<section class="contact">
-    <h2>Experience Luxury</h2>
-    <p>Email: <a href="mailto:sahu@dreamsleep.co.in">sahu@dreamsleep.co.in</a></p>
-    <p>Phone: <a href="tel:+918660896414">+91 8660896414</a></p>
-</section>
-
 </body>
 </html>
+
+
