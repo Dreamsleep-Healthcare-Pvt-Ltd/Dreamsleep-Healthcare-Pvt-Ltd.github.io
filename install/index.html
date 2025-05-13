@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Redirecting...</title>
+  <script>
+    window.onload = function () {
+      const ua = navigator.userAgent || navigator.vendor || window.opera;
+      
+      if (/android/i.test(ua)) {
+        window.location.href = "https://google.com";
+      } else if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) {
+        window.location.href = "https://testflight.apple.com/join/DF95TzUf";
+      } else {
+        // Optional fallback for desktop or unknown devices
+        document.body.innerHTML = "Please visit this page on your mobile device.";
+      }
+    };
+  </script>
+</head>
+<body>
+  <p>Redirecting you to the right app store...</p>
+</body>
+</html>
