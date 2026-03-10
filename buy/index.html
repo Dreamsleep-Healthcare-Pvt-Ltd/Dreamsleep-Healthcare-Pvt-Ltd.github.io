@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Redirecting to Buy...</title>
+  <meta http-equiv="refresh" content="0;url=https://dreamspace25.webflow.io/buy?model=lucid&size=queen" />
+  <script>
+    // Preserve query params if present, otherwise use default model=lucid&size=queen
+    var params = new URLSearchParams(window.location.search);
+    var model = params.get('model') || 'lucid';
+    var size = params.get('size') || 'queen';
+    window.location.replace('https://dreamspace25.webflow.io/buy?model=' + encodeURIComponent(model) + '&size=' + encodeURIComponent(size));
+  </script>
+</head>
+<body>
+  <p>Redirecting you to the buy page...</p>
+</body>
+</html>
